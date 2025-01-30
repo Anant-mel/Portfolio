@@ -1,0 +1,273 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* Ensures vertical alignment of elements */
+  background-color: rgba(18, 18, 18, 0.2);
+  backdrop-filter: blur(15px); /* Creates a blurry, glassy effect */
+  padding: 10px 157px; /* Padding for spacing */
+  height: auto; /* Adjusts height to content */
+  color: white;
+  box-sizing: border-box; /* Includes padding in size */
+  position: sticky; /* Makes it stick to the top */
+  top: 0; /* Sticks it to the very top */
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.logo {
+  width: 52.05px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logo img {
+  max-width: 100%;
+  width: auto; /* Let the logo maintain its natural width */
+  max-width: 100%; /* Prevents it from exceeding the parent container */
+  height: auto; /* Ensure aspect ratio is maintained */
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color:  rgba(158, 88, 243, 1);
+}
+
+.contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Centers button vertically */
+}
+
+.contact-button a {
+  text-decoration: none;
+  background-color: rgba(158, 88, 243, 1);
+  color: white;
+  padding: 16px 56px;
+  border-radius: 14px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.contact-button a:hover {
+  background-color: rgba(158, 88, 243, 1);
+}
+
+.hero {
+  height: auto;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  z-index: 1;
+}
+
+.hero-name {
+  font-size: 64px;
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  line-height: 100%;
+  padding-bottom: 32px;
+  text-align: center;
+  margin-top: 200px;
+  z-index: 3;
+}
+
+.hero-intro {
+  color: white;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  z-index: 3;
+}
+
+.hero {
+  z-index: 1;
+}
+
+
+/* Hide navigation links by default on mobile */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hamburger Icon (initially visible on mobile) */
+#hamburger-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+}
+
+
+
+
+/* Media Queries */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 32px; /* Reduce font size */
+  }
+
+  .hero-intro {
+    font-size: 16px; /* Reduce intro text size */
+  }
+
+  .hero {
+    padding: 1.5rem; /* Adjust padding */
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 32px; /* Further reduce font size */
+  }
+
+  .hero-intro {
+    font-size: 16px; /* Further reduce intro text size */
+    line-height: 1.4; /* Adjust line spacing for readability */
+  }
+
+  .hero {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .hero-text-contaier {
+    padding: 0 1rem; /* Add some padding to avoid text touching edges */
+  }
+}
+
+
+
+
+
+
+
+
+/* For tablets and smaller screens */
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links and contact button by default */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    gap: 20px;
+  }
+
+
+  .nav-links {
+    width: auto;
+  }
+  
+
+
+  .logo img {
+    width: auto; /* Keeps the logo at its original size */
+    height: auto; /* Ensure logo keeps its aspect ratio */
+  }
+
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* Make the hamburger icon visible */
+  #hamburger-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  /* Make contact button appear inside the menu */
+  .contact-button {
+    margin-top: 20px; /* Space it out from the links */
+    display: none; /* Hide the contact button by default */
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  
+  .logo img {
+    width: auto; /* Keeps the logo at its original size */
+    height: auto; /* Ensure logo keeps its aspect ratio */
+  }
+
+
+  .navbar .logo {
+    font-size: 20px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* When the menu is toggled on (active state) */
+.nav-links.active {
+  display: flex; /* Show nav links and contact button */
+}
+
+.nav-links.active .contact-button {
+  display: block; /* Make the contact button visible inside the menu */
+}
