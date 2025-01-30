@@ -1,0 +1,119 @@
+
+.Aboutme {
+  height: auto;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 64px;
+  font-weight: 600;
+  color: rgba(158, 88, 243, 1);
+}
+
+
+.about-content {
+  display: flex;
+  gap: 54px;
+  color: white;
+}
+
+.about-content p {
+  line-height: 200%;
+  letter-spacing: 3%;
+}
+
+.profile-pic {
+  height: 300px;
+}
+
+.links {
+  color: rgba(158, 88, 243, 1);
+  cursor: pointer;
+}
+
+.links:hover {
+  text-decoration: underline;
+}
+
+.pic {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  background-image: url('img/portfolioimg.jpg');
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  border-radius: 32px;
+}
+
+.social-links {
+  width: 350px;
+  top: 60%;
+  margin-top: 320px;
+}
+
+
+@media (max-width: 1400px) {
+  .Aboutme {
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 200px;
+  }
+}
+  
+
+@media (max-width: 1240px) {
+  .Aboutme {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 200px;
+  }
+}
+  
+@media (max-width: 970px) {
+  .Aboutme {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 200px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+    color: white;
+  }
+
+  .pic {
+    z-index: 1;
+    width: 100%;
+  }
+
+  .about-content p {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+  .Aboutme {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .heading {
+    font-size: 48px;
+    text-align: center;
+  }
+}
