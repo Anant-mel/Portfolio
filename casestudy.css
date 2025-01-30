@@ -1,0 +1,322 @@
+body {
+  background-color: rgba(18, 18, 18, 1);
+  font-family: Poppins;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* Ensures vertical alignment of elements */
+  background-color: rgba(18, 18, 18, 0.2);
+  backdrop-filter: blur(15px); /* Creates a blurry, glassy effect */
+  padding: 10px 157px; /* Padding for spacing */
+  height: auto; /* Adjusts height to content */
+  color: white;
+  box-sizing: border-box; /* Includes padding in size */
+  position: sticky; /* Makes it stick to the top */
+  top: 0; /* Sticks it to the very top */
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.logo {
+  width: 52.05px;
+  height: 32px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.logo img {
+  max-width: 100%;
+  width: auto; /* Let the logo maintain its natural width */
+  max-width: 100%; /* Prevents it from exceeding the parent container */
+  height: auto; /* Ensure aspect ratio is maintained */
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color:  rgba(158, 88, 243, 1);
+}
+
+.contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Centers button vertically */
+}
+
+.contact-button a {
+  text-decoration: none;
+  background-color: rgba(158, 88, 243, 1);
+  color: white;
+  padding: 16px 56px;
+  border-radius: 14px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.contact-button a:hover {
+  background-color: rgba(158, 88, 243, 1);
+}
+
+/* Hide navigation links by default on mobile */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hamburger Icon (initially visible on mobile) */
+#hamburger-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+}
+
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links and contact button by default */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    gap: 20px;
+  }
+
+
+  .nav-links {
+    width: auto;
+  }
+  
+
+
+  .logo img {
+    width: auto; /* Keeps the logo at its original size */
+    height: auto; /* Ensure logo keeps its aspect ratio */
+  }
+
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* Make the hamburger icon visible */
+  #hamburger-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  /* Make contact button appear inside the menu */
+  .contact-button {
+    margin-top: 20px; /* Space it out from the links */
+    display: none; /* Hide the contact button by default */
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  
+  .logo img {
+    width: auto; /* Keeps the logo at its original size */
+    height: auto; /* Ensure logo keeps its aspect ratio */
+  }
+
+
+  .navbar .logo {
+    font-size: 20px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* When the menu is toggled on (active state) */
+.nav-links.active {
+  display: flex; /* Show nav links and contact button */
+}
+
+.nav-links.active .contact-button {
+  display: block; /* Make the contact button visible inside the menu */
+}
+
+
+.main-area {
+  padding: 157px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.toprow {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.toprow img {
+  cursor: pointer;
+}
+
+.bottrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  background-color: rgba(27, 27, 27, 1);
+  border-radius: 32px;
+}
+
+.client-card p {
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.timetag {
+  color: rgba(172, 173, 175, 1);
+  font-size: 14px;
+}
+
+.heaven {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mid {
+  text-align: center;
+  color: #fff;
+  line-height: 200%;
+  letter-spacing: 3%;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.hell {
+  width: 100%;
+  object-fit: contain;
+}
+
+.hell img {
+  width: 100%;
+  border-radius: 32px;
+}
+
+.checkSite  {
+  width: 167px;
+  height: 50px;
+  border-radius: 16px;
+  font-family: poppins;
+  color: #fff;
+  background-color: rgba(158, 88, 243, 1);
+  cursor: pointer;
+  border-style: none;
+}
+
+
+@media (max-width: 1190px) {
+  .bottrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .bottrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+}
+
+
+@media (max-width: 780px) {
+  .main-area {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+}
+
+@media (max-width: 620px) {
+  .main-area {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+  
+}
